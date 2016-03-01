@@ -55,7 +55,7 @@ def packageAirglow():
     Spectra.sort(order=['airmass','solarFlux'])
 
     # Load LSST filters
-    throughPath = os.getenv('LSST_THROUGHPUTS_BASELINE')
+    throughPath = os.path.join(getPackageDir('throughputs'),'baseline')
     keys = ['u','g','r','i','z','y']
     nfilt = len(keys)
     filters = {}
@@ -131,7 +131,7 @@ def packageLowerAtm():
     Spectra.sort(order=['airmass','nightTimes'])
 
     # Load LSST filters
-    throughPath = os.getenv('LSST_THROUGHPUTS_BASELINE')
+    throughPath = os.path.join(getPackageDir('throughputs'),'baseline')
     keys = ['u','g','r','i','z','y']
     nfilt = len(keys)
     filters = {}
@@ -251,7 +251,7 @@ def packageMoon():
     moonSpectra = moonSpectra[good]
 
     # Load LSST filters
-    throughPath = os.getenv('LSST_THROUGHPUTS_BASELINE')
+    throughPath = os.path.join(getPackageDir('throughputs'),'baseline')
     keys = ['u','g','r','i','z','y']
     nfilt = len(keys)
     filters = {}
@@ -332,7 +332,7 @@ def packageScattered():
     Spectra.sort(order=['airmass','nightTimes'])
 
     # Load LSST filters
-    throughPath = os.getenv('LSST_THROUGHPUTS_BASELINE')
+    throughPath = os.path.join(getPackageDir('throughputs'),'baseline')
     keys = ['u','g','r','i','z','y']
     nfilt = len(keys)
     filters = {}
@@ -411,7 +411,7 @@ def packageUpper():
     Spectra.sort(order=['airmass','nightTimes'])
 
     # Load LSST filters
-    throughPath = os.getenv('LSST_THROUGHPUTS_BASELINE')
+    throughPath = os.path.join(getPackageDir('throughputs'),'baseline')
     keys = ['u','g','r','i','z','y']
     nfilt = len(keys)
     filters = {}
@@ -506,7 +506,7 @@ def packageZodiacal():
     Spectra.sort(order=['airmass', 'hpid'])
 
     # Load LSST filters
-    throughPath = os.getenv('LSST_THROUGHPUTS_BASELINE')
+    throughPath = os.path.join(getPackageDir('throughputs'),'baseline')
     keys = ['u','g','r','i','z','y']
     nfilt = len(keys)
     filters = {}
